@@ -20,6 +20,7 @@ function createBoxes(amount) {
     const createDiv = document.createElement('div');
     createDiv.style.width = width + "px";
     createDiv.style.height = height + "px";
+    createDiv.style.backgroundColor = rdmColor();
     createDiv.classList.add('created-box');
     refs.output.appendChild(createDiv);
     height +=10;
@@ -27,9 +28,12 @@ function createBoxes(amount) {
   }
 }
 
-
 function onClearOutput() {
   refs.output.textContent = '';
   width = 30;
   height = 30;
 }
+
+const rdmColor = () => {
+  return `#${(((1 << 24) * Math.random()) | 0).toString(16)}`;
+};
