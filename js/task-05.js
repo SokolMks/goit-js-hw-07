@@ -6,8 +6,7 @@ const refs = {
 refs.input.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-  console.log(event.currentTarget.value);
-  if(event.currentTarget.value === '') {
+  if(event.currentTarget.value.trim() === '') {
     refs.display.textContent = "незнакомец";
   } else {
     refs.display.textContent = event.currentTarget.value;
