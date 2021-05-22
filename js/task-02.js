@@ -6,6 +6,8 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
+const ingredientsList = document.querySelector('#ingredients');
+
   const ingredientsItem = ingredients.map(elem => {
     const elemName = document.createElement('li');
     elemName.textContent = elem;
